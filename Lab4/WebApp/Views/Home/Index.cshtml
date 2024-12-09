@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Genetic Algorithm for Squares";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+
+<body>
+    <div style="margin:10px;">
+        <h2>Genetic Algorithm Experiment</h2>
+        <label>1x1 Squares:</label>
+        <input type="number" id="txtSquare1" value="5" style="width:50px; margin:5px;" />
+        <label>2x2 Squares:</label>
+        <input type="number" id="txtSquare2" value="5" style="width:50px; margin:5px;" />
+        <label>3x3 Squares:</label>
+        <input type="number" id="txtSquare3" value="5" style="width:50px; margin:5px;" />
+        <button onclick="createExperiment()" style="margin:5px;">Create Experiment</button>
+        <button onclick="runSteps()" style="margin:5px;">Run Steps</button>
+        <button onclick="stopSteps()" style="margin:5px;">Stop Steps</button>
+        <button onclick="deleteExperiment()" style="margin:5px;">Delete Experiment</button>
+    </div>
+    <div style="margin:10px;">
+        <h3>Experiments</h3>
+        <ul id="experimentList"></ul>
+        <button onclick="fetchExperiments()" style="margin:5px;">Refresh Experiment List</button>
+    </div>
+
+    <div style="display:flex; margin:10px;">
+        <div style="flex:1; margin:5px;">
+            <h3>Output</h3>
+            <pre id="outputText" style="white-space: pre-wrap; background:#f9f9f9; border:1px solid #ddd; padding:10px;"></pre>
+        </div>
+        <div style="flex:2; margin:5px;">
+            <h3>Visualization</h3>
+            <canvas id="canvasRectangles" width="400" height="400" style="background:white; border:1px solid #000;"></canvas>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
